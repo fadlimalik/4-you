@@ -10,10 +10,9 @@ if (url.searchParams.get('by') != null) {
   sender = "Fadli";
 }
 
-
-let footer = document.getElementById("sender");
+let footer = document.getElementById("doi");
 footer.innerHTML = sender;
-footer.href = "https://www.instagram.com/";
+footer.href = "https://www.instagram.com/famal.00/";
 
 document.querySelector(".tombol").addEventListener('click', function () {
   Swal.fire("Hai Sayang", "Aku ada pertanyaan nih buat kamu", "question").then(function () {
@@ -68,14 +67,14 @@ document.querySelector(".tombol").addEventListener('click', function () {
                     }).then((result) => {
                       /* Read more about isConfirmed, isDenied below */
                       if (result.isConfirmed) {
-                        Swal.fire(`Huhu iya ${sender} juga kangen sama ${nama} :((`).then(function () {
+                        Swal.fire(`Huhu iya ${sender} juga kangen sama ${nama} :(( `).then(function () {
                           Swal.fire('Terakhir boleh sayang?').then(function () {
                             Swal.fire('Coba klik ikon hati di paling bawah dong')
                           })
                         })
                       } else if (result.isDenied) {
-                        Swal.fire('Jahat bangeet, Masa gak kangen sih', '', 'error').then(function () {
-                          Swal.fire(`yaudah kalo gitu, cukup tau sama ${nama}`)
+                        Swal.fire('kok kamu gitu sih', '', 'error').then(function () {
+                          Swal.fire(`Oke, cukup tau.. ! ${nama}`)
                         })
                       }
                     })
@@ -83,8 +82,8 @@ document.querySelector(".tombol").addEventListener('click', function () {
                 })
               })
             } else if (result.isDenied) {
-              Swal.fire(`Yakin ga suka sama ${sender}? :((`, '', 'error').then(function () {
-                Swal.fire(`Yaudah deh, cukup tau sama ${nama}!`)
+              Swal.fire(`Yakin ga sayang sama ${sender}? :((`, '', 'error').then(function () {
+                Swal.fire(`Oke kalo gitu, Cukup tau ${nama}!`)
               })
             }
           })
