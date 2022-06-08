@@ -3,16 +3,18 @@ let nama, val;
 const url_string = document.URL;
 const url = new URL(url_string);
 let sender;
+let doi;
 
 if (url.searchParams.get('by') != null) {
   sender = url.searchParams.get('by');
 } else {
-  sender = "Ilyasa";
+  sender = "Fadli";
 }
 
-let footer = document.getElementById("credit");
+doi = "Afila";
+let footer = document.getElementById("doi");
 footer.innerHTML = sender;
-footer.href = "https://www.instagram.com/ilyasaazm/";
+footer.href = "https://www.instagram.com/";
 
 document.querySelector(".tombol").addEventListener('click', function () {
   Swal.fire("Hai Sayang", "Aku ada pertanyaan nih buat kamu", "question").then(function () {
@@ -59,22 +61,22 @@ document.querySelector(".tombol").addEventListener('click', function () {
                   val = e.value
                   Swal.fire(`Makasih ya udah sayang sama ${sender} ${val}%`).then(function () {
                     Swal.fire({
-                      title: `${nama} pernah ga si mikirin ${sender}?`,
+                      title: `${nama} Kangen gak sama ${sender}?`,
                       showDenyButton: true,
                       showCancelButton: false,
-                      confirmButtonText: `Pernah :(`,
+                      confirmButtonText: `Kangen :(`,
                       denyButtonText: `Gak!`,
                     }).then((result) => {
                       /* Read more about isConfirmed, isDenied below */
                       if (result.isConfirmed) {
-                        Swal.fire(`Huhu iya ${sender} sekarang lagi mikirin ${nama} :(( makanya bikin ini`).then(function () {
+                        Swal.fire(`Huhu iya ${sender} juga kangen sama ${nama} :((`).then(function () {
                           Swal.fire('Terakhir boleh sayang?').then(function () {
                             Swal.fire('Coba klik ikon hati di paling bawah dong')
                           })
                         })
                       } else if (result.isDenied) {
-                        Swal.fire('Gapapa, aku mah siapa atuh', '', 'error').then(function () {
-                          Swal.fire(`Selamat Siang, lancar barokah ${nama}`)
+                        Swal.fire('Jahat bangeet, Masa gak kangen sih', '', 'error').then(function () {
+                          Swal.fire(`yaudah kalo gitu, cukup tau sama ${nama}`)
                         })
                       }
                     })
@@ -83,7 +85,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
               })
             } else if (result.isDenied) {
               Swal.fire(`Yakin ga suka sama ${sender}? :((`, '', 'error').then(function () {
-                Swal.fire(`Yaudah deh, Selamat Siang Lancar Barokah ${nama}!`)
+                Swal.fire(`Yaudah deh, cukup tau sama ${nama}!`)
               })
             }
           })
