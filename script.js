@@ -3,7 +3,6 @@ let nama, val;
 const url_string = document.URL;
 const url = new URL(url_string);
 let sender;
-let doi;
 
 if (url.searchParams.get('by') != null) {
   sender = url.searchParams.get('by');
@@ -11,8 +10,8 @@ if (url.searchParams.get('by') != null) {
   sender = "Fadli";
 }
 
-doi = "Afila";
-let footer = document.getElementById("doi");
+
+let footer = document.getElementById("sender");
 footer.innerHTML = sender;
 footer.href = "https://www.instagram.com/";
 
